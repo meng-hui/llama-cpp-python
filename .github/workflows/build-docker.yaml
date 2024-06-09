@@ -42,7 +42,7 @@ jobs:
             ghcr.io/${{ github.repository_owner }}/llama-cpp-python:latest
             ghcr.io/${{ github.repository_owner }}/llama-cpp-python:${{ github.ref_name }}
           build-args: |
-            CUDA_VERSION=${{ env.CUDA_VERSION }}
+            CUDA_VERSION=${{ vars.CUDA_VERSION }}
             BUILDKIT_INLINE_CACHE=1
 
       - name: Publish to GitHub Tag
